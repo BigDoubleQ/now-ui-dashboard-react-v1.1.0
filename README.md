@@ -34,8 +34,6 @@ It comes with 6 filter colors for the sidebar (`black`, `blue`, `green`, `orange
 [<img src="https://s3.amazonaws.com/creativetim_bucket/github/angular.png" width="60" height="60" />](https://www.creative-tim.com/product/now-ui-dashboard-angular2)
 
 
-| HTML | React | Angular |
-| --- | --- | --- | --- |
 | [![Now UI Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/75/original/opt_nud_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard) | [![Now UI Dashboard React](https://s3.amazonaws.com/creativetim_bucket/products/76/original/opt_nud_react_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-react) | [![Now UI Dashboard Angular](https://s3.amazonaws.com/creativetim_bucket/products/85/original/opt_nud_angular_thumbnail.jpg)](https://www.creative-tim.com/product/now-ui-dashboard-angular2)
 
 ## Demo
@@ -47,21 +45,44 @@ It comes with 6 filter colors for the sidebar (`black`, `blue`, `green`, `orange
 [View More](https://demos.creative-tim.com/now-ui-dashboard-react/#/dashboard).
 
 
-## Quick start
+## 快速开始
 
-Quick start options:
+0、将项目中dll文件夹复制到C盘根目录下。
 
-- `npm i now-ui-dashboard-react` (you will need to import from the dist folder our components)
-- Clone the repo: `git clone https://github.com/creativetimofficial/now-ui-dashboard-react.git`.
-- [Download from Github](https://github.com/creativetimofficial/now-ui-dashboard-react/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/now-ui-dashboard-react).
+1、以管理员的身份安装下方工具
+- npm install windows-build-tools -g
+- npm install node-gyp -g
+
+2、安装electron-rebuild。
+- npm install --save-dev electron-rebuild
+
+至此所需要的组件都已经安装完毕啦。如果安装过程中报错可尝试多执行两次或者翻墙。
+
+3、老生常谈
+- npm install
+
+4、使用electron-rebuild重编译模块，这步很重要，否则安装的组件是无法正常使用的。再每次npm install以后，如果ffi、ref组件有问题，可尝试执行该命令。
+- .\node_modules\.bin\electron-rebuild.cmd
+
+5、启动开发模式，在项目根目录下执行以下命令
+- npm start 
+- electron .
+
+6、打包
+修改package.json中main的值为 "main": "dist/index.js",执行
+- npm run build
+修改package.json中main的值为 "main": "public/electron.js",执行
+- electron-builder --win
+即可在根目录下生成dist文件夹，里面包含一个安装版和免安装版程序包
+  
 
 
-## Documentation
-The documentation for the Now UI Dashboard React is hosted at our [website](https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial).
+## 文档
+http://note.youdao.com/noteshare?id=f9b1c4ef37343a06ac0b6c228ddf8082&sub=A5EE0830739C44E98E9653D9B6A409C8
+http://note.youdao.com/noteshare?id=6afd7c9a92ada165ba9da1ea54a9fc1d&sub=EE38F297984F4EA1B49CB0DBA70AFFE5
 
 
-## File Structure
+## 文件结构
 
 Within the download you'll find the following directories and files:
 
@@ -144,61 +165,11 @@ Now UI Dashboard React
         │   └── ReadCard.jsx
         ├── Table
         │   └── Tables.jsx
+        ├── ReadCard
+        │   └── ReadCard.jsx
         ├── Typography
         │   └── Typography.jsx
         └── User
             └── User.jsx
 ```
 
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-
-## Resources
-- Demo: https://demos.creative-tim.com/now-ui-dashboard-react
-- Download Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-- Documentation: https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial
-- License Agreement: https://www.creative-tim.com/license
-- Support: https://www.creative-tim.com/contact-us
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/now-ui-dashboard-react/issues)
-
-## Reporting Issues
-We use GitHub Issues as the official bug tracker for the Now UI Dashboard React. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the Now UI Dashboard React. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2018 Creative Tim (https://www.creative-tim.com)
-- Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-## Useful Links
-
-More products from Creative Tim: <https://www.creative-tim.com/products>
-
-Tutorials: <https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w>
-
-Freebies: <https://www.creative-tim.com/products>
-
-Affiliate Program (earn money): <https://www.creative-tim.com/affiliates/new>
-
-Social Media:
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Google+: <https://plus.google.com/+CreativetimPage>
-
-Instagram: <https://instagram.com/creativetimofficial>
